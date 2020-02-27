@@ -36,3 +36,24 @@ window.addEventListener("keydown", event => balloonHandler(event));
 // function as expected. There are many ways to accomplish this task, but you will need
 // to at minimum add listeners to each link and toggle the display of the tab contents.
 // Hint: display: none; hides an element, and display: block; will bring it
+
+let tab1link = document.getElementById("tab1link");
+let tab1 =document.getElementById("tab1");
+let tab2link = document.getElementById("tab2link");
+let tab2 =document.getElementById("tab2");
+let tab3link = document.getElementById("tab3link");
+let tab3 =document.getElementById("tab3");
+
+function defaultState (){
+    tab2.style.display = "none";
+    tab3.style.display = "none";
+};
+
+defaultState();
+
+tab2link.addEventListener ("click", event => {
+    if (event.click = "0") {
+        tab1.style.display = "none";
+        tab3.style.display = "none";
+    }
+})
