@@ -12,6 +12,23 @@
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
 
+let currentSize=100;
+
+let balloon = document.getElementById("balloon");
+const balloonHandler = event => {
+    if (event.key == "ArrowUp") {
+        event.preventDefault();
+        currentSize *= 1.1;
+        balloon.style.fontSize = currentSize + "%";
+    }
+    else if (event.key == "ArrowDown") {
+        event.preventDefault();
+        currentSize /= 1.1 ;
+        balloon.style.fontSize = currentSize + "%";
+    }
+}
+window.addEventListener("keydown", event => balloonHandler(event));
+
 // 2. The index.html page has a tabbed layout. Make the default state of the layout show
 // the first tab, and make it so that when you click the links at the top the correct
 // tab's contents are displayed and the others are hidden. Prevent the default action of
